@@ -140,7 +140,7 @@ li img {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background-color: var(--list-background);
+    background-color: white;
 }
 
 .image-preview img {
