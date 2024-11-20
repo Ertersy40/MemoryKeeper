@@ -1,0 +1,16 @@
+{
+    "name": "Memory Keeper ❤️",
+    "short_name": "Memory ❤️",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#fbeae5",
+    "theme_color": "#d7826e",
+    "icons": [
+      {
+        "src": "heart.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
