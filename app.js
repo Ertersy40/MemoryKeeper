@@ -39,7 +39,6 @@ function loadMemories() {
 
 // Render Memory
 function renderMemory(memory) {
-    console.log("rendering memory:", memory)
     const list = document.getElementById("memoryList");
     const li = document.createElement("li");
 
@@ -53,11 +52,13 @@ function renderMemory(memory) {
         <div class="memory-content">
             ${memory.image ? `<img src="${memory.image}" alt="Memory Image" onclick="showImageFullScreen('${memory.image}')">` : ""}
             <span>${textWithLinks}</span>
+            <div class="memory-timestamp">${memory.timestamp}</div>
         </div>
         <button onclick="deleteMemory('${memory.id}')">✔️</button>
     `;
     list.appendChild(li);
 }
+
 
 
 // Delete Memory
@@ -99,7 +100,16 @@ function SubmitMemory(event) {
     }
 
     const id = Date.now().toString();
-    const memory = { id, text, image: null };
+    const timestamp = new Date().toLocaleString("en-US", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false, // Optional: Use 24-hour time format. Remove this line for AM/PM.
+    });
+     // Get the current date and time
+    const memory = { id, text, image: null, timestamp };
 
     // Handle image upload
     if (imageInput.files.length > 0) {
