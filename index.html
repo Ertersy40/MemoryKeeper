@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Keeper</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Memory Keeper ❤️</h1>
+        <form id="memoryForm">
+            <div class="input-container">
+                <input type="text" id="memoryText" placeholder="Add a memory..." required>
+                <div class="image-preview" id="imagePreview">
+                    <label for="memoryImage" class="image-icon">📷</label>
+                </div>
+                <input type="file" id="memoryImage" accept="image/*" style="display: none;" onchange="previewImage(event)">
+                <button type="submit" class="submit-icon">⬆️</button>
+            </div>
+        </form>
+        <ul id="memoryList"></ul>
+    </div>
+    <canvas id="confetti-canvas" style="position: fixed; top: 0; left: 0; z-index: 1000; pointer-events: none; display: none;"></canvas>
+    <script src="confetti.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
