@@ -1,6 +1,17 @@
+:root {
+    /* Color Palette Variables */
+    --background-color: #f4dde8; /* Soft pink */
+    --container-background: #ffffff; /* White */
+    --text-color: #a5673f; /* Warm brown */
+    --primary-color: #dda7e2; /* Muted pink */
+    --primary-hover-color: #c954c9; /* Darker pink */
+    --border-color: #d4a89d; /* Light brown */
+    --list-background: #f5e1f2; /* Soft pink */
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #fdf3f0;
+    background-color: var(--background-color);
     margin: 0;
     padding: 20px;
     display: flex;
@@ -12,7 +23,7 @@ body {
 .container {
     max-width: 400px;
     width: 100%;
-    background: white;
+    background: var(--container-background);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -20,7 +31,7 @@ body {
 
 h1 {
     text-align: center;
-    color: #ff6f61;
+    color: var(--text-color);
 }
 
 form {
@@ -32,19 +43,19 @@ form {
 input, button {
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
 }
 
 button {
-    background-color: #ff6f61;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #ff4a4a;
+    background-color: var(--primary-hover-color);
 }
 
 ul {
@@ -58,10 +69,10 @@ li {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background: #fff8f6;
+    background: var(--list-background);
     margin-bottom: 10px;
     border-radius: 4px;
-    border: 1px solid #f3d1ce;
+    border: 1px solid var(--border-color);
 }
 
 li img {
@@ -69,7 +80,6 @@ li img {
     max-height: 50px;
     border-radius: 4px;
 }
-
 
 /* Modal Overlay */
 .modal-overlay {
@@ -106,7 +116,7 @@ li img {
 .close-modal {
     margin-top: 10px;
     padding: 10px 20px;
-    background: #ff6f61;
+    background: var(--primary-color);
     color: white;
     border: none;
     border-radius: 4px;
@@ -115,7 +125,7 @@ li img {
 }
 
 .close-modal:hover {
-    background: #ff4a4a;
+    background: var(--primary-hover-color);
 }
 
 /* Image Preview Container */
@@ -125,12 +135,12 @@ li img {
     height: 40px;
     overflow: hidden;
     border-radius: 50%;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background-color: #fdf3f0;
+    background-color: var(--list-background);
 }
 
 .image-preview img {
@@ -144,16 +154,14 @@ li img {
     cursor: pointer;
 }
 
-
 /* Input Container */
 .input-container {
     display: flex;
     align-items: center;
     gap: 10px;
     position: relative;
-    width: 100%;
-    background: #fff8f6;
-    border: 1px solid #ddd;
+    background: var(--list-background);
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     padding: 5px;
 }
@@ -172,7 +180,7 @@ input[type="text"] {
 .image-icon {
     font-size: 20px;
     cursor: pointer;
-    color: #ff6f61;
+    color: var(--primary-color);
     padding: 5px;
     display: flex;
     align-items: center;
@@ -184,7 +192,7 @@ input[type="text"] {
     font-size: 20px;
     background: none;
     border: none;
-    color: #ff6f61;
+    color: var(--primary-color);
     cursor: pointer;
     padding: 5px;
     display: flex;
@@ -193,7 +201,7 @@ input[type="text"] {
 }
 
 .submit-icon:hover {
-    color: #ff4a4a;
+    color: var(--primary-hover-color);
 }
 
 /* Hide File Input */
@@ -201,9 +209,10 @@ input[type="file"] {
     display: none;
 }
 
+/* Timestamp Styling */
 .memory-timestamp {
     font-size: 0.8em;
-    color: gray;
+    color: var(--text-color);
     margin-top: 5px;
     display: block;
 }
